@@ -1,0 +1,3 @@
+[submodule "Serveur/django"]
+	path = Serveur/django
+	url = https://github.com/django/django.git
