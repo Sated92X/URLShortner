@@ -9,3 +9,9 @@
 .history/
 
 front/node_modules
+Serveur/env
+.vscode/
+
+env/bin/
+env/lib
+env/include
