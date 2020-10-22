@@ -5,8 +5,9 @@ class Lien():
 
     def getById(id):
         myQuery = {"_id" : id}
-        return dataConn.tblLiens.find(myQuery).limit(1)
-
-    
+        print(myQuery)
+        result = dataConn.tblLiens.find_one(myQuery)
+        return result
+        
     def insert(self):
         return tblLiens.insert_one(self)

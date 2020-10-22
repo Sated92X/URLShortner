@@ -9,6 +9,7 @@ djangorestframework = "*"
 flask = "*"
 flask-sqlalchemy = "*"
 pymongo = "*"
+dnspython = "*"
 
 [dev-packages]
 
