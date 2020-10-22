@@ -12,16 +12,15 @@ app = Flask(__name__)
 def home():
     return "Hello, world!"
 
-@app.route("/ajouterliens")
+@app.route("/ajouterliens",methods = ['POST'])
 def ajouterliens():
+    lienOriginal = request.form.to_dict()['url']
+    Lien.insert(lienOriginal)
     return "Ok"
 
-@app.route("/get/<int:id>")
-def get(id):
-   return jsonify(Lien.getById(id))
-
-
-
+@app.route("/get/<string:guid>")
+def get(guid):
+   return Lien.getByGuid(guid)
 
 
 @app.route("/testus")

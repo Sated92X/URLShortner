@@ -1,13 +1,19 @@
 from flask import Flask
 from .dataConn import dataConn
-
+import uuid
 class Lien():
 
-    def getById(id):
-        myQuery = {"_id" : id}
+    def getByGuid(guid):
+        myQuery = {"short" : guid}
         print(myQuery)
         result = dataConn.tblLiens.find_one(myQuery)
-        return result
+        print(result)
+        return result["original"]
         
-    def insert(self):
-        return tblLiens.insert_one(self)
+    def insert(original):
+        url = {"original" : original, "short" : str(uuid.uuid1()).split('-')[0] }
+        print(url)
+        dataConn.tblLiens.insert(url)
+        return "Ok"
+
+    
