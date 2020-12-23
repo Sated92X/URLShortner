@@ -1,9 +1,15 @@
 .home {
 	height: 100%;
 }
+
+.home-button {
+	float: right;
+	margin-right: 20px;
+}
+
 .home-row {
 	height: 100%;
-	align-items: center;
+	
 }
 
 .home-form {
@@ -14,6 +20,16 @@
 }
 
 .home-title {
-	margin-bottom: 20px;
+	margin-bottom: 120px;
 	text-align: center;
 }
+
+@media only screen and (min-width: 992px) {
+	.home-row {
+		align-items: center;	
+	}
+
+	.home-button {
+		margin-right: 0;
+	}
+} 
