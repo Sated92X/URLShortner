@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 class Home extends React.Component {
-
+  
   render() {
     return (
       <div className="home">
@@ -12,8 +12,8 @@ class Home extends React.Component {
                 <Form.Group>
                   <Form.Control type="url" placeholder="Make a quick link !" />
                 </Form.Group>
-                <a href="#" class="stretched-link">Advance settings</a>
-                <Button className="home-button" variant="primary">Quick link!</Button>
+                <a href="#">Advance settings</a>
+                <Button className="home-button" variant="primary" type="submit">Quick link!</Button>
               </Form>
           </Col>
         </Row>
