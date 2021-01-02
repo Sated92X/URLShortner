@@ -3,5 +3,6 @@
 ### `npm install`
 This will install your dependencies.
 
-## Then copy the .env.example a .env file you will need to create
-Project should be set correctly.
+## Then create the .env file
+You can do this by copying the .env.example to .env file.
+You will need to create the file.
