@@ -1,5 +1,6 @@
 require('dotenv').config();
 const path = require('path');
+const webpack = require('webpack'); 
 
 module.exports = {
   entry: './src/index.js',
@@ -47,6 +48,8 @@ module.exports = {
     port: ( process.env.DEFAULT_PORT ? process.env.DEFAULT_PORT : 3000)
   },
   devtool: 'cheap-module-eval-source-map',
-  watch: true
+  plugins: [
+    new webpack.DefinePlugin({ 'process.env.API_URL': JSON.stringify(process.env.API_URL) })
+  ],
+  watch: true,
 };
-
