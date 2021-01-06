@@ -45,7 +45,12 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
-    port: ( process.env.DEFAULT_PORT ? process.env.DEFAULT_PORT : 3000)
+    port: ( process.env.DEFAULT_PORT ? process.env.DEFAULT_PORT : 3000),
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    }
   },
   devtool: 'cheap-module-eval-source-map',
   plugins: [

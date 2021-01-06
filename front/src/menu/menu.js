@@ -16,7 +16,7 @@ class Menu extends React.Component {
 	        		<Link className="nav-link" to="/home">Home</Link>
 	        	</Nav.Item>
 	        	<Nav.Item className="menu-item">
-	        		<Link className="nav-link" to="/about">about</Link>
+	        		<Link className="nav-link" to="/about">About</Link>
 	        	</Nav.Item>
 	        </Nav>
       	</Navbar>
