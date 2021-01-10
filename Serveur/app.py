@@ -16,12 +16,20 @@ def home():
 
 @app.route("/ajouterliens",methods = ['OPTIONS'])
 def options():
-    return "Request 200";
+    return "Request 200"
 
 @app.route("/ajouterliens",methods = ['POST'])
 def ajouterliens():
     lienOriginal = request.form.to_dict()['url']
     Lien.insert(lienOriginal)
+    return "Ok"
+
+@app.route("/ajouterliensperso",methods = ['POST'])
+def ajouterliensperso():
+    lienOriginal = request.form.to_dict()['url']
+    guid_perso = request.form.to_dict()['liensPerso']
+
+    Lien.insertPerso(lienOriginal, guid_perso)
     return "Ok"
 
 @app.route("/get/<string:guid>")

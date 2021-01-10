@@ -16,4 +16,8 @@ class Lien():
         dataConn.tblLiens.insert(url)
         return "Ok"
 
+    def insertPerso( original, guid_perso):
+        url = {"original" : original, "short" : guid_perso }
+        dataConn.tblLiens.insert(url)
+        return "Ok"
     
