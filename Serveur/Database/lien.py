@@ -21,3 +21,10 @@ class Lien():
         dataConn.tblLiens.insert(url)
         return "Ok"
     
+    def linkExists(guid):
+        link = getByGuid(guid)
+        if (link is not None):
+            return True
+        else :
+            return False
+    
