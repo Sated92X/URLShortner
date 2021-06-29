@@ -4,6 +4,7 @@ import '../scss/index.scss';
 import SideBar from './menu/sidebar';
 import Menu from './menu/menu';
 import Home from './home';
+import About from './about';
 import * as serviceWorker from './serviceWorker';
 import {
   BrowserRouter as Router,
@@ -23,12 +24,10 @@ ReactDOM.render((
                     <SideBar />
                 </Col>
                 <Col className="content" md={12} lg={10} >
-            		<Switch>
+            		  <Switch>
                 	    <Route exact path="/" component = {Home} />
                 	    <Route path="/home" component = {Home} />
-                	    <Route path="/about">
-            	           <div> allo</div> 
-            	        </Route>
+                	    <Route path="/about" component = {About} />
             	    </Switch>
                 </Col>
             </Row>
