@@ -43,6 +43,7 @@ module.exports = {
     ]
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, 'public'),
     compress: true,
     port: ( process.env.DEFAULT_PORT ? process.env.DEFAULT_PORT : 3000),
